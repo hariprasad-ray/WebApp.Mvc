@@ -1,0 +1,22 @@
+﻿@model StudentModel
+
+<h1>Student Details</h1>
+
+<table>
+    <thead>
+        Students Details
+    </thead>
+
+    @if (Model.Id > 0)
+    {
+        <tbody>
+            <tr><th>Id</th><th>Name</th><th>Section</th><th>Address</th></tr>
+            <tr><td>@Model.Id</td><td>@Model.Name</td><td>@Model.Section</td><td>@Model.Address</td></tr>
+        </tbody>
+    }
+    else
+    {
+        <br />
+        <span>Student record isn't available !</span>
+    }
+</table>
