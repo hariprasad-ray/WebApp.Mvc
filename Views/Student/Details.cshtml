@@ -2,9 +2,24 @@
 
 <h1>Student Details</h1>
 
+@* @await Html.PartialAsync("~/View/Student/_DateTime.cshtml"); *@
+
+@{
+    await Html.RenderPartialAsync("_DateTime");
+}
+
 <table>
     <thead>
-        Students Details
+        @{
+            var student = ViewData["input"] as WebApp.Mvc.Models.StudentModel;
+            var studentObj = ViewBag.input;
+            var today_date = TempData["date"];
+
+        }
+        Date : @today_date
+        Students Details of @student.Name, belongs to section @studentObj.Section
+
+        
     </thead>
 
     @if (Model.Id > 0)
@@ -20,3 +35,9 @@
         <span>Student record isn't available !</span>
     }
 </table>
+
+
+
+
+
+
