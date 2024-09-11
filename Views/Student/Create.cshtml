@@ -1,0 +1,35 @@
+﻿@model WebApp.Mvc.Models.StudentModel
+
+<h1>Create Student</h1>
+
+<form asp-controller="Student" asp-action="Create" method="post" class="mt-3">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="form-group row">
+        <label asp-for="Name" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-10">
+            <input asp-for="Name" class="form-control" placeholder="Enter Your Name">
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label asp-for="Section" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-10">
+            <input asp-for="Section" class="form-control" placeholder="Enter Your Section">
+            <span asp-validation-for="Section" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label asp-for="Address" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-10">
+            <input asp-for="Address" class="form-control" placeholder="Enter Your Address">
+            <span asp-validation-for="Address" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-sm-10">
+            <button type="submit" class="btn btn-primary">Create</button>
+        </div>
+    </div>   
+</form>
+
+   

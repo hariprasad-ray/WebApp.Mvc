@@ -60,6 +60,16 @@ namespace WebApp.Mvc.Controllers
 
         }
 
+        public ViewResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Create(StudentModel studentModel)
+        {
+            return View();
+        }
         public JsonResult ListAllJson()
         {
             return Json(studentModels);
@@ -103,5 +113,6 @@ namespace WebApp.Mvc.Controllers
         //FileResult - File
         //RedirectResult - Redirect
 
+       
     }
 }

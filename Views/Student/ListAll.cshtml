@@ -13,7 +13,17 @@
         <tr><th>Id</th><th>Name</th><th>Section</th><th>Address</th></tr>
         @foreach (var item in Model)
         {
-            <tr><td>@item.Id</td><td>@item.Name</td><td>@item.Section</td><td>@item.Address</td></tr>
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Section</td>
+                <td>@item.Address</td>
+                <td>
+                <td>
+                    @Html.ActionLink("Details", "Details", "Student", new { id = @item.Id }, new { @class = "btn btn-primary" })
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Student" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                </td>
+            </tr>
         }
     </tbody>
 </table>
